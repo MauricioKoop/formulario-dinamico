@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+#titulo {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    font-size: 26px;
+}
+
+#subtitulo {
+    font-family: "open sans";
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+#boxBtn {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#btnNextField,
+#btnPreviousField {
+    cursor: pointer;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
