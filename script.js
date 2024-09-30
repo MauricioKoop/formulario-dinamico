@@ -1,8 +1,10 @@
 let btnIniciar = document.getElementById('btnIniciar');
 let btnVoltar = document.getElementById('btnVoltar');
+let boxBtn = document.getElementById('boxBtn');
 let btnCompleteForm = document.getElementById('btnCompleteForm');
 let fieldContainer = document.querySelectorAll('.field-container');
 let header = document.getElementById('header');
+let formularioContainer = document.getElementById('formularioContainer');
 let count = -1;
 
 function showFieldsForm(acionador){
@@ -57,8 +59,11 @@ function completeForm(count) {
     if (count >= 7) {
         btnIniciar.classList.add('hide');
         btnCompleteForm.classList.remove('hide');
+        boxBtn.classList.add('centered');
+        formularioContainer.classList.add('centered');
     }else{
         btnIniciar.classList.remove('hide');
         btnCompleteForm.classList.add('hide');
+        formularioContainer.classList.remove('centered');
     }
 }

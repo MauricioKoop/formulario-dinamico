@@ -42,7 +42,8 @@ body {
 }
 
 #btnIniciar,
-#btnVoltar {
+#btnVoltar,
+#btnCompleteForm {
     cursor: pointer;
     padding: 10px 40px;
     border: none;
@@ -68,12 +69,19 @@ body {
 }
 
 .field-container input {
-    display: block;
+    display: block!important;
     margin-top: 10px;
 }
 
 .field-container input[type="checkbox"] {
-    display: inline-block;
+    display: inline-block!important;
+}
+
+.centered {
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    width: 100%;
 }
 
 label[for="face"],
@@ -89,4 +97,5 @@ label[for="google"] {
     height: 0;
     width: 0;
     font-size: 0!important;
+    display: none;
 }
