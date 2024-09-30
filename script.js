@@ -16,8 +16,6 @@ function showFieldsForm(acionador){
                 fieldContainer[i].classList.add('hide');
             }
         }
-
-        console.log(count);
     }
 
     if(acionador === 2){
@@ -31,9 +29,11 @@ function showFieldsForm(acionador){
                 fieldContainer[i].classList.add('hide');
             }
         }
-        
+
         // Impede números negativos
         count < 0 ? count = 0 : count;
-        console.log(count);
     }
+
+    // Esconde o botão voltar se não possuir campo anteroior ao atual
+    count >= 1 ? btnVoltar.classList.remove('hide') : btnVoltar.classList.add('hide');
 }
