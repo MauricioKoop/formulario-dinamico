@@ -10,7 +10,6 @@ let count = -1;
 function showFieldsForm(acionador){
     if(acionador === 1){
         count++;
-
         // faz o loop e exibe o próximo campo e esconde os demais
         for (let i = 0; i < fieldContainer.length; i++) {
             if(count === i){
@@ -19,10 +18,14 @@ function showFieldsForm(acionador){
                 fieldContainer[i].classList.add('hide');
             }
         }
+        console.log(count);
     }
 
     if(acionador === 2){
         count--;
+
+        // Impede números negativos
+        count < 0 ? count = 0 : count;
 
         // Faz o loop, exibe o campo anterior e esconde os demais
         for (let i = 0; i < fieldContainer.length; i++) {
@@ -33,12 +36,11 @@ function showFieldsForm(acionador){
             }
         }
 
-        // Impede números negativos
-        count < 0 ? count = 0 : count;
+        console.log(count);
     }
 
     // Esconde o botão voltar se não possuir campo anteroior ao atual
-    count >= 1 ? btnVoltar.classList.remove('hide') : btnVoltar.classList.add('hide');
+    count >= 0 ? btnVoltar.classList.remove('hide') : btnVoltar.classList.add('hide');
 
     // Esconde o header se o formulário estiver sido iniciado, e altera o texto do botão começar
     if (count >= 0) {
@@ -65,5 +67,6 @@ function completeForm(count) {
         btnIniciar.classList.remove('hide');
         btnCompleteForm.classList.add('hide');
         formularioContainer.classList.remove('centered');
+        boxBtn.classList.remove('centered');
     }
 }
