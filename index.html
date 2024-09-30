@@ -7,8 +7,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="titulo">Seja bem vinda(o) ao Pré-Agendamento da sua primeira consulta com Dr Fulano de tal</h1>
-        <h2 id="subtitulo">Vamos inicar o planejamento dos seus sonhos</h2>
+        <div id="header">
+            <h1 id="titulo">Seja bem vinda(o) ao Pré-Agendamento da sua primeira consulta com Dr Fulano de tal</h1>
+            <h2 id="subtitulo">Vamos inicar o planejamento dos seus sonhos</h2>
+        </div>
 
         <form id="formularioContainer">
             <div class="field-container hide">
@@ -64,12 +66,11 @@
                     <input id="width" type="number" name="widthField" value="">
                 </label>
             </div>
-            
         </form>
 
         <div id="boxBtn">
-            <button id="btnIniciar">Começar</button>
-            <button id="btnVoltar">Voltar</button>
+            <button id="btnIniciar" onclick="showFieldsForm(1)">Começar</button>
+            <button id="btnVoltar" onclick="showFieldsForm(2)">Voltar</button>
         </div>
 
         <script src="script.js">

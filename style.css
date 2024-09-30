@@ -50,8 +50,17 @@ body {
     font-size: 16px;
 }
 
+#formularioContainer {
+    position: relative;
+    width: 100%;
+}
+
 .field-container {
-    margin-bottom: 20px;
+   position: relative;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
 }
 
 .field-container label {
@@ -73,6 +82,11 @@ label[for="google"] {
     display: block;
 }
 
-.hide {
-    display: none;
+.hide,
+.hide label,
+.hide input {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    font-size: 0!important;
 }
