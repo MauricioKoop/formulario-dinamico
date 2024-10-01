@@ -7,6 +7,7 @@ let header = document.getElementById('header');
 let formularioContainer = document.getElementById('formularioContainer');
 let progressBarWidth = document.querySelector('.progress__bar-width');
 let progressBarValue = document.querySelector('.progress__bar-value');
+let elCompleteForm = document.getElementById('completeForm');
 let count = -1;
 
 function showFieldsForm(acionador){
@@ -65,11 +66,13 @@ function completeForm(count) {
     if (count >= 7) {
         btnIniciar.classList.add('hide');
         btnCompleteForm.classList.remove('hide');
+        elCompleteForm.classList.remove('hide');
         boxBtn.classList.add('centered');
         formularioContainer.classList.add('centered');
     }else{
         btnIniciar.classList.remove('hide');
         btnCompleteForm.classList.add('hide');
+        elCompleteForm.classList.add('hide');
         formularioContainer.classList.remove('centered');
         boxBtn.classList.remove('centered');
     }
