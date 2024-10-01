@@ -10,6 +10,7 @@ let progressBarValue = document.querySelector('.progress__bar-value');
 let count = -1;
 
 function showFieldsForm(acionador){
+    // Se houver click no botão avançar
     if(acionador === 1){
         count++;
 
@@ -25,6 +26,7 @@ function showFieldsForm(acionador){
         showPercentageBar(count);
     }
 
+    // Se houver click no botão voltar
     if(acionador === 2){
         count--;
 
@@ -52,8 +54,10 @@ function showFieldsForm(acionador){
         btnIniciar.textContent = "Começar";
     }
 
+    // Esconde o botão voltar se não possuir campos antescessores
+    count == 0 ? btnVoltar.classList.add('hide') : btnVoltar.classList.remove('hide');
 
-    // Se chegar no último campo executa função formulário completo
+    // Função formulário completo
     completeForm(count);
 }
 
