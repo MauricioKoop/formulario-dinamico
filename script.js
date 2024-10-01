@@ -5,11 +5,14 @@ let btnCompleteForm = document.getElementById('btnCompleteForm');
 let fieldContainer = document.querySelectorAll('.field-container');
 let header = document.getElementById('header');
 let formularioContainer = document.getElementById('formularioContainer');
+let progressBarWidth = document.querySelector('.progress__bar-width');
+let progressBarValue = document.querySelector('.progress__bar-value');
 let count = -1;
 
 function showFieldsForm(acionador){
     if(acionador === 1){
         count++;
+
         // faz o loop e exibe o próximo campo e esconde os demais
         for (let i = 0; i < fieldContainer.length; i++) {
             if(count === i){
@@ -18,7 +21,8 @@ function showFieldsForm(acionador){
                 fieldContainer[i].classList.add('hide');
             }
         }
-        console.log(count);
+
+        showPercentageBar(count);
     }
 
     if(acionador === 2){
@@ -35,12 +39,8 @@ function showFieldsForm(acionador){
                 fieldContainer[i].classList.add('hide');
             }
         }
-
-        console.log(count);
+        showPercentageBar(count);
     }
-
-    // Esconde o botão voltar se não possuir campo anteroior ao atual
-    count >= 0 ? btnVoltar.classList.remove('hide') : btnVoltar.classList.add('hide');
 
     // Esconde o header se o formulário estiver sido iniciado, e altera o texto do botão começar
     if (count >= 0) {
@@ -69,4 +69,13 @@ function completeForm(count) {
         formularioContainer.classList.remove('centered');
         boxBtn.classList.remove('centered');
     }
+}
+
+function showPercentageBar(count){
+    totalValue = 7;
+    percentage = (count / totalValue) * 100;
+    percentage = Number.parseInt(percentage.toFixed());
+    
+    progressBarValue.textContent = percentage + "%";
+    progressBarWidth.style.width = `${percentage}%`;
 }
