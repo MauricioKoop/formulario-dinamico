@@ -70,6 +70,19 @@ html:after {
 #formularioContainer {
     position: relative;
     width: 100%;
+    min-width: 600px;
+}
+
+@media(max-width: 575.99px) {
+    #formularioContainer {
+        min-width: auto;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+    #formularioContainer {
+        min-width: 500px;
+    }
 }
 
 .field-container {
@@ -84,13 +97,32 @@ html:after {
     font-size: 24px;
 }
 
+.field-container label p {
+    font-size: 16px;
+}
+
+.knew-options {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 .field-container input {
     display: block!important;
-    margin-top: 10px;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+}
+
+.field-container input:focus-visible {
+    outline: none;
 }
 
 .field-container input[type="checkbox"] {
     display: inline-block!important;
+    width: fit-content;
+    margin-top: 0;
 }
 
 .progress__bar {
@@ -138,7 +170,10 @@ html:after {
 label[for="face"],
 label[for="insta"],
 label[for="google"] {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
 }
 
 .hide,
