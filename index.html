@@ -7,71 +7,74 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="header">
-            <h1 id="titulo">Seja bem vinda(o) ao Pré-Agendamento da sua primeira consulta com Dr Fulano de tal</h1>
-            <h2 id="subtitulo">Vamos inicar o planejamento dos seus sonhos</h2>
-        </div>
 
-        <form id="formularioContainer">
-            <div class="field-container hide">
-                <label for="name">
-                    Digite seu nome no campo abaixo*
-                    <input id="name" type="text" name="nameField" value="" required>
-                </label>
+        <div id="align-and-limit">
+            <div id="header">
+                <h1 id="titulo">Seja bem vinda(o) ao Pré-Agendamento da sua primeira consulta com Dr Fulano de tal</h1>
+                <h2 id="subtitulo">Vamos inicar o planejamento dos seus sonhos</h2>
             </div>
-            <div class="field-container hide">
-                <label for="whatsapp">
-                    Contato WhatsApp*
-                    <input id="whatsapp" type="number" name="whatsappField" value="" required>
-                </label>
-            </div>
-            <div class="field-container hide">
-                <p class="knew-options">
-                    Por onde nos conheceu?
-                </p>
-                <label for="insta">
-                    <input id="insta" type="checkbox" name="instagramField" value="instagram">
-                    Instagram
-                </label>
-                <label for="face">
-                    <input id="face" type="checkbox" name="facebookField" value="facebook">
-                    Facebook
-                </label>
-                <label for="google">
-                    <input id="google" type="checkbox" name="googleField" value="google">
-                    Google
-                </label>
-            </div>
-            <div class="field-container hide">
-                <label for="city">
-                    Qual é a sua cidade?
-                    <input id="city" type="text" name="cityField" value="" required>
-                </label>
-            </div>
-            <div class="field-container hide">
-                <label for="age">
-                    Idade
-                    <input id="age" type="number" name="ageField" value="" required>
-                </label>
-            </div>
-            <div class="field-container hide">
-                <label for="height">
-                    Altura
-                    <input id="height" type="number" name="heightField" value="" required>
-                </label>
-            </div>
-            <div class="field-container hide">
-                <label for="weight">
-                    Peso
-                    <input id="width" type="number" name="widthField" value="" required>
-                </label>
-            </div>
-            <button id="btnCompleteForm" type="submit" class="hide">Enviar meus dados</button>
-        </form>
 
-        <div id="boxBtn">
-            <button id="btnVoltar" class="hide" onclick="showFieldsForm(2)">Voltar</button>
-            <button id="btnIniciar" onclick="showFieldsForm(1)">Começar</button>
+            <form id="formularioContainer">
+                <div class="field-container hide">
+                    <label for="name">
+                        Digite seu nome no campo abaixo*
+                        <input id="name" type="text" name="nameField" value="" required>
+                    </label>
+                </div>
+                <div class="field-container hide">
+                    <label for="whatsapp">
+                        Contato WhatsApp*
+                        <input id="whatsapp" type="number" name="whatsappField" value="" required>
+                    </label>
+                </div>
+                <div class="field-container hide">
+                    <p class="knew-options">
+                        Por onde nos conheceu?
+                    </p>
+                    <label for="insta">
+                        <input id="insta" type="checkbox" name="instagramField" value="instagram">
+                        Instagram
+                    </label>
+                    <label for="face">
+                        <input id="face" type="checkbox" name="facebookField" value="facebook">
+                        Facebook
+                    </label>
+                    <label for="google">
+                        <input id="google" type="checkbox" name="googleField" value="google">
+                        Google
+                    </label>
+                </div>
+                <div class="field-container hide">
+                    <label for="city">
+                        Qual é a sua cidade?
+                        <input id="city" type="text" name="cityField" value="" required>
+                    </label>
+                </div>
+                <div class="field-container hide">
+                    <label for="age">
+                        Idade
+                        <input id="age" type="number" name="ageField" value="" required>
+                    </label>
+                </div>
+                <div class="field-container hide">
+                    <label for="height">
+                        Altura
+                        <input id="height" type="number" name="heightField" value="" required>
+                    </label>
+                </div>
+                <div class="field-container hide">
+                    <label for="weight">
+                        Peso
+                        <input id="width" type="number" name="widthField" value="" required>
+                    </label>
+                </div>
+                <button id="btnCompleteForm" type="submit" class="hide">Enviar meus dados</button>
+            </form>
+
+            <div id="boxBtn">
+                <button id="btnVoltar" class="hide" onclick="showFieldsForm(2)">Voltar</button>
+                <button id="btnIniciar" onclick="showFieldsForm(1)">Começar</button>
+            </div>
         </div>
 
         <div class="progress__bar">

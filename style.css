@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,21 +8,35 @@
 }
 
 body {
-    background-color: blueviolet;
+    background-image: url(img/bg-cyber.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    max-width: 800px;
     margin: 0 auto;
     color: white;
     padding: 0 30px;
     height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+html:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(to right, rgba(238, 0, 255, 0.8), rgba(106, 0, 255, 0.8));
 }
 
 #titulo {
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: 500;
     font-family: "Montserrat";
     font-size: 26px;
 }
@@ -78,11 +94,13 @@ body {
 }
 
 .progress__bar {
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 15px;
-    border-radius: 50px;
-    border: 1px solid rgb(0, 98, 255);
+    border: 1px solid rgb(255, 255, 255, .3);
     margin-top: 30px;
     font-size: 10px;
     display: flex;
@@ -102,8 +120,12 @@ body {
     bottom: 0;
     background: rgb(0, 98, 255);
     width: 0;
-    border-radius: 50px;
     z-index: 1;
+}
+
+#align-and-limit {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .centered {
